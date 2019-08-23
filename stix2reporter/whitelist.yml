@@ -1,0 +1,547 @@
+Domain:
+- accounts\.google\.com
+- accounts\.youtube\.com
+- addons\.mozilla\.org
+- .*\.akamaized\.net
+- bouncer-bouncer-elb\.prod\.mozaws\.net
+- cdnjs\.cloudflare\.com
+- clients\d+.google.com
+- clients\d+.googleusercontent.com
+- clientservices\.googleapis\.com
+- crl\.verisign\.com
+- cs9\.wac\.phicdn\.net
+- c\.s-microsoft\.com
+- dns\.msftncsi\.com
+- crl\d+\.digicert\.com
+- crl\.microsoft\.com
+- download\.cdn\.mozilla\.net
+- download\.mozilla\.org
+- e8220\.dscd\.akamaiedge\.net
+- fonts\.googleapis\.com
+- go\.microsoft\.com
+- _googlecast\._tcp\.local
+- .*\.gvt1\.com
+- ieonline\.microsoft\.com
+- ieonlinews\.microsoft\.com
+- ocsp\.comodoca\.com
+- ocsp\.digicert\.com
+- ocsp\.msocsp\.com
+- ocsp\.pki\.goog
+- ocsp\.usertrust\.com
+- ocsp\.verisign\.com
+- olympia\.prod\.mozaws\.net
+- otf\.msn\.com
+- rssgov\.windows\.microsoft\.com
+- rss\.msn\.com
+- safebrowsing-cache\.google\.com
+- safebrowsing.cache\.l\.google\.com
+- safebrowsing\.google\.com
+- sb\.l\.google\.com
+- search\.r[\d\-]+\.services\.mozilla\.com
+- search\.services\.mozilla\.com
+- self-repair\.mozilla\.org
+- shield-normandy-elb-prod-\d+\.us-west-2\.elb\.amazonaws\.com
+- snippets\.cdn\.mozilla\.net
+- ssl\.gstatic\.com
+- static-global-s-msn-com\.akamaized\.net
+- teredo\.ipv6\.microsoft\.com
+- tiles-cloudfront\.cdn\.mozilla\.net
+- tiles\.r[\d\-]+\.services\.mozilla\.com
+- tiles\.services\.mozilla\.com
+- time\.windows\.com
+- tools\.google\.com
+- translate\.googleapis\.com
+- uhf\.microsoft\.com
+- update\.googleapis\.com
+- vindicoasset\.edgesuite\.net
+- watson\.microsoft\.com
+- \w+\.cloudfront\.net
+- web\.vortex\.data\.microsoft\.com
+- www3\.l\.google\.com
+- (www\.)?bing\.com
+- (www\.)?download\.windowsupdate\.com
+- (www\.)?google-analytics\.com
+- (www\.)?googleapis\.com
+- (www\.)?google\.com
+- (www\.)?google\.de
+- (www\.)?gstatic\.com
+- (www\.)?microsoft\.com
+- (www\.)?mozilla\.org
+- (www\.)?mozilla\.org\.cdn\.cloudflare\.net
+- (www\.)?msn\.com
+
+NetworkTraffic:
+- dst_addr: 8\.8\.8\.8
+  dst_port: 53
+- dst_addr: 192\.168\.178\.\d{1,3}
+  dst_port: 137
+- dst_addr: 192\.168\.178\.\d{1,3}
+  dst_port: 138
+- dst_addr: 192\.168\.178\.\d{1,3}
+  dst_port: 139
+- dst_addr: 224\.0\.0\.251
+  dst_port: 5353
+- dst_addr: 224\.0\.0\.252
+  dst_port: 5355
+- dst_addr: 239\.255\.255\.250
+  dst_port: 1900
+
+File:
+# Adobe
+- path: \%APPDATA\%\\Adobe\\Acrobat\\9\.0
+  name: AdobeCMapFnt09\.lst
+- path: \%LOCALAPPDATA\%\\Adobe\\Acrobat\\9\.0\\Cache
+  name: AcroFnt09\.lst
+# Windows
+- path: \\Device\\NamedPipe
+- path: \%LOCALAPPDATA\%\\Microsoft\\Feeds
+- name: desktop\.ini$
+- name: '[\w]{16}_gfxinit\.lock$'
+- name: GDIPFONTCACHEV1\.DAT
+  path: \%LOCALAPPDATA\%
+- name: ~DF[\w]{16}\.TMP
+  path: \%LOCALAPPDATA\%\\Temp
+- name: '[\w]+\.tmp'
+  path: \%LOCALAPPDATA\%\\Temp
+- name: REFEDIT\.exd
+  path: \%USERPROFILE\%\\Application Data\\Microsoft\\Forms
+- name: RefEdit\.exd
+  path: \%APPDATA\%\\Microsoft\\Forms
+- name: \%USERNAME\%@msn\[\d\]\.txt
+  path: \%APPDATA\%\\Microsoft\\Windows\\Cookies
+- name: ([\w]{32}|[\w_]{65})
+  path: \%USERPROFILE\%\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\Content
+- name: ([\w]{32}|[\w_]{65})
+  path: \%USERPROFILE\%\\AppData\\LocalLow\\Microsoft\\CryptnetUrlCache\\MetaData
+- name: UserCache\.bin
+  path: \%APPDATA\%\\Adobe\\Acrobat\\9.0
+- name: ACECache\d+\.lst
+  path: \%LOCALAPPDATA\%\\Adobe\\Color
+- name: wsRGB\.icc
+  path: \%LOCALAPPDATA\%\\Adobe\\Color\\Profiles
+- name: normal\.dot
+  path: \%APPDATA\%\\microsoft\\(vorlagen|templates)
+- name: wscRGB\.icc
+  path: \%LOCALAPPDATA\%\\Adobe\\Color\\Profiles
+- name: \~WRD0000\.tmp
+  path: \%APPDATA\%\\Microsoft\\(Vorlagen|Templates)
+- path: \%APPDATA\%\\Microsoft\\(Vorlagen|Templates)
+  name: ~\$Normal\.dot
+- name: e3b0c44298fc1c14\_000003\.log
+- name: e3b0c44298fc1c14\_REFEDIT\.exd
+- name: ec6c7c37be67a0e4\_update\-1\.status
+- name: e3b0c44298fc1c14\_safe\ browsing\ cookies\-journal
+- name: '[A-Za-z\d\-]+\.dat'
+  path: \%LOCALAPPDATA\%\\Microsoft\\Windows\\Temporary\ Internet\ Files\\AntiPhishing
+# Office
+- name: opa11\.dat
+  path: C:\\ProgramData\\Microsoft\\OFFICE\\DATA
+- name: Makro\.LNK
+  path: \%APPDATA\%\\Microsoft\\Office\\(Zuletzt verwendet|Recent Items)
+- name: MSO1033\.acl
+  path: \%APPDATA\%\\Microsoft\\Office
+- path: \%APPDATA\%\\Microsoft\\Office
+  name: Word11\.pip
+- path: \%APPDATA\%\\Microsoft\\Office\\(Zuletzt verwendet|Recent Items)
+  name: index\.dat
+- path: \%LOCALAPPDATA\%\\Temp\\VBE
+  name: RefEdit\.exd
+- path: \%LOCALAPPDATA\%\\Temp\\VBE
+  name: MSForms\.exd
+- path: \%APPDATA\%\\Microsoft\\Office\\(Zuletzt verwendet|Recent Items)
+  name: EUROTOOL\.LNK
+- path: \%APPDATA\%\\Microsoft\\Office\\(Zuletzt verwendet|Recent Items)
+  name: (Vorlagen|Templates)\.LNK
+# Google Chrome
+- name: LOG
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\Service Worker\\Database
+- name: CrashpadMetrics-active\.pma
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data
+- name: settings.dat
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Crashpad
+- name: MANIFEST-\d{6}
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\Download Service\\EntryDB
+- name: data_\d+
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\GPUCache
+- name: data_\d+
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\ShaderCache\\GPUCache
+- name: (LOG|LOCK)
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\Sync Data\\LevelDB
+- name: LOCK
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\Thumbnails
+- name: .*-journal$
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data(\\Default)?
+- name: Last Version
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data
+- name: \d{6}.log
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\Sync Data\\LevelDB
+- name: \d{6}.log
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default\\Thumbnails\\MANIFEST-\d{6}
+- name: current
+  path: \%LOCALAPPDATA\%\\google\\chrome\\user data\\default\\download service\\entrydb
+- name: Google Chrome\.lnk
+  path: \%APPDATA\%\\Microsoft\\Internet Explorer\\Quick Launch\\User Pinned\\TaskBar
+- name: google profile\.ico
+  path: \%LOCALAPPDATA\%\\google\\chrome\\user data\\default
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Current\ Session
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\BrowserMetrics
+  name: BrowserMetrics\-[A-Fa-f0-9]{8}\-[A-Fa-f0-9]{3}\.pma
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Network\ Action\ Predictor
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default
+  name: translate\ ranker\ model
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\data\_reduction\_proxy\_leveldb
+  name: MANIFEST\-\d{6}
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default
+  name: transportsecurity
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Web\ Data
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Cookies
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default
+  name: secure\ preferences
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Origin\ Bound\ Certs
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default
+  name: preferences
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Extensions\\\w{32}\\1\.2\_0\\\_metadata
+  name: computed\_hashes\.json
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Login\ Data
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Top\ Sites
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Shortcuts
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: Favicons
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Thumbnails
+  name: LOG
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data
+  name: local\ state
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Download\ Service\\EntryDB
+  name: LOG
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\data\_reduction\_proxy\_leveldb
+  name: LOG
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Extensions\\\w{32}\\0\.10\_0\\\_metadata
+  name: computed\_hashes\.json
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\ShaderCache\\GPUCache
+  name: index
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data
+  name: lockfile
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Sync\ Data\\LevelDB
+  name: MANIFEST\-\d{6}
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Sync\ Data\\LevelDB
+  name: \d{6}\.dbtmp
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Thumbnails
+  name: MANIFEST\-\d{6}
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Thumbnails
+  name: \d{6}\.dbtmp
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\GPUCache
+  name: index
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Thumbnails
+  name: \d{6}\.log
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Download\ Service\\EntryDB
+  name: LOCK
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: '[A-Fa-f0-9]{8}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{12}\.tmp'
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Download\ Service\\EntryDB
+  name: \d{6}\.dbtmp
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Download\ Service\\EntryDB
+  name: \d{6}\.log
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Download\ Service\\EntryDB
+  name: \d{6}\.dbtmp
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\data\_reduction\_proxy\_leveldb
+  name: \d{6}\.log
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\data\_reduction\_proxy\_leveldb
+  name: \d{6}\.dbtmp
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: '[A-Fa-f0-9]{8}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{12}\.tmp'
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data
+  name: '[A-Fa-f0-9]{8}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{12}\.tmp'
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Crashpad
+  name: metadata
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Cache
+  name: data\_\d
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default\\data\_reduction\_proxy\_leveldb
+  name: current
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\data\_reduction\_proxy\_leveldb
+  name: CURRENT\~\w+\.TMP
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Extensions\\\w{32}\\1\.7\_0\\\_metadata
+  name: computed\_hashes\.json
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default\\session\ storage
+  name: current
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: ChromeDWriteFontCache
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Session\ Storage
+  name: MANIFEST\-\d{6}
+- path: \%LOCALAPPDATA\%\\google\\chrome\\user\ data\\default
+  name: network\ persistent\ state
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Session\ Storage
+  name: LOG
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data
+  name: '[A-Fa-f0-9]{4}\.tmp'
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default
+  name: '[A-Fa-f0-9]{4}\.tmp'
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Session\ Storage
+  name: LOCK
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Session\ Storage
+  name: \d{6}\.dbtmp
+- path: \%LOCALAPPDATA\%\\Google\\Chrome\\User\ Data\\Default\\Session\ Storage
+  name: \d{6}\.log
+- name: debug\.log
+  path: \%PROGRAMFILES\(X86\)\%\\Google\\Chrome\\Application
+- name: History Provider Cache
+  path: \%LOCALAPPDATA\%\\Google\\Chrome\\User Data\\Default
+# Internet Explorer
+- path: \%LOCALAPPDATA\%\\Microsoft\\Windows\\Temporary Internet Files\\Content\.IE5\\[\w]{8}(\\.*)?
+- name: index\.dat
+  path: \%LOCALAPPDATA\%\\Microsoft\\Windows\\History\\History.IE5\\MSHist\d+
+- name: tabiconcache\.dat
+  path: \%USERPROFILE\%\\LocalLow\\Microsoft\\Internet Explorer
+- name: tabiconcache\.dat
+  path: \%APPDATA\%\\Microsoft\\Windows\\Cookies\\\w+@msn\[2\]\.txt
+- path: \%LOCALAPPDATA\%\\Microsoft\\Internet\ Explorer\\Recovery\\High\\Active
+  name: RecoveryStore\.\{[A-Fa-f0-9]{8}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{12}\}\.dat
+- path: \%LOCALAPPDATA\%\\Microsoft\\Internet\ Explorer\\Recovery\\High\\Active
+  name: \{[A-Fa-f0-9]{8}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{4}\-[A-Fa-f0-9]{12}\}\.dat
+- path: \%LOCALAPPDATA\%\\Microsoft\\Windows\\Temporary\ Internet\ Files\\Content\.IE5\\[\w]{8}
+  name: '[A-Fa-f0-9\-]{18}\[\d\]'
+- path: \%LOCALAPPDATA\%\\Microsoft\\Windows\\Temporary\ Internet\ Files\\Content\.IE5\\[\w]{8}
+  name: known\_providers\_download\_v1\[1\]\.xml
+- path: \%LOCALAPPDATA\%\\Microsoft\\Windows\\Temporary\ Internet\ Files\\Content\.IE5\\[\w]{8}
+  name: mscc\-0\.4\.1\.min\[1\]\.js
+# FireFox
+- name: update-\d+\.status
+  path: \%LOCALAPPDATA\%\\Mozilla\\updates\\[\w]{16}\\updates\\0
+- name: (pluginreg\.dat\.tmp|places\.sqlite-wal|prefs(-\d)?\.js|pluginreg\.dat|revocations\.txt)
+  path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+- name: tabiconcache\.dat
+  path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default\\places\.sqlite-shm
+- name: webapps\.json
+  path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default\\webapps
+- name: update\.status
+  path: \%LOCALAPPDATA\%\\mozilla\\updates\\[\w]{16}\\updates\\\d
+- name: active-update\.xml
+  path: \%LOCALAPPDATA\%\\mozilla\\updates\\[\w]{16}
+- path: \%APPDATA\%\\mozilla\\firefox\\profiles\\[\w]{8}\.default\\sessionstore-backups
+  name: recovery\.js
+- path: \%APPDATA\%\\mozilla\\firefox\\profiles\\[\w]{8}\.default
+  name: sessioncheckpoints\.json
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: cookies\.sqlite\-wal
+- path: \%LOCALAPPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default\\safebrowsing(\\.*)?
+- path: \%APPDATA\%\\mozilla\\firefox\\profiles\\[\w]{8}\.default
+  name: search\-metadata\.json
+- path: \%LOCALAPPDATA\%\\Mozilla\\updates\\[A-Fa-f0-9]{16}\\updates\\0
+  name: update\.mar
+- path: \%LOCALAPPDATA\%\\mozilla\\updates\\[A-Fa-f0-9]{16}
+  name: updates\.xml
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: compatibility\.ini
+- path: \%APPDATA\%\\mozilla\\firefox\\profiles\\[\w]{8}\.default
+  name: xulstore\.json
+- path: \%APPDATA\%\\mozilla\\firefox\\profiles\\[\w]{8}\.default\\crashes
+  name: store\.json\.mozlz4
+- path: \%LOCALAPPDATA\%\\mozilla\\firefox\\profiles\\[\w]{8}\.default
+  name: frequencycap\.json
+- path: \%LOCALAPPDATA\%\\Mozilla\\updates\\[A-Fa-f0-9]{16}
+  name: active\-update\-1\.xml
+- path: \%LOCALAPPDATA\%\\Mozilla\\updates\\[A-Fa-f0-9]{16}
+  name: updates\-1\.xml
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: places\.sqlite\-shm
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: revocations\-1\.txt
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: cookies\.sqlite\-shm
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default\\webapps
+  name: webapps\-1\.json
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: webappsstore\.sqlite\-wal
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: webappsstore\.sqlite\-shm
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: search\-metadata\.json\.tmp
+- path: \%LOCALAPPDATA\%\\Temp
+  name: etilqs\_[\w]{15}
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: healthreport\.sqlite\-wal
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: healthreport\.sqlite\-shm
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default
+  name: xulstore\.json\.tmp
+- path: \%APPDATA\%\\Mozilla\\Firefox\\Profiles\\[\w]{8}\.default\\crashes
+  name: store\.json\.mozlz4\.tmp
+- path: \%LOCALAPPDATA\%\\Mozilla\\Firefox\\Profiles\\\w+\.default\\cache2(\\.*)?
+- name: directorylinks\.json
+  path: \%LOCALAPPDATA\%\\mozilla\\firefox\\profiles\\\w+\.default
+
+Process:
+- name: conhost\.exe
+- name: dinotify\.exe
+- name: dwm\.exe
+- name: explorer\.exe
+- name: lsass\.exe
+- name: msfeedssync\.exe
+- name: mobsync\.exe
+- name: taskhost\.exe
+- name: chrome\.exe
+  command_line: .*--type=(crashpad-handler|watcher|gpu-process|utility).*
+- name: iexplore\.exe
+  command_line: .*\\Internet Explorer\\iexplore\.exe\" SCODEF:\d+ CREDAT:\d+
+
+Mutex:
+- Global\\C\:\:Users\:[\w]+\:AppData\:Local\:Microsoft\:Windows\:Explorer\:thumbcache_idx\.db\!rwWriterMutex
+- Global\\C\:\:Users\:[\w]+\:AppData\:Local\:Microsoft\:Windows\:Explorer\:thumbcache_\d+\.db\!dfMaintainer
+- Global\\C\:\:Users\:[\w]+\:AppData\:Local\:Microsoft\:Windows\:Explorer\:thumbcache_sr\.db\!dfMaintainer
+- Global\\C\:\:Users\:[\w]+\:AppData\:Local\:Microsoft\:Windows\:Explorer\:thumbcache_idx\.db\!ThumbnailCacheInit
+- Global\\C\:\:Users\:[\w]+\:AppData\:Local\:Microsoft\:Windows\:Explorer\:thumbcache_idx\.db\!rwReaderRefs
+- '[\w]{43}'
+- Acrobat Instance Mutex
+- Local\\ChromeProcessSingletonStartup!
+- \{[\w\-]+\}
+- Local\\FirefoxStartupMutex
+- Global\\MozillaUpdateMutex-[\w]+=
+- Local\\!IETld!Mutex
+- Local\\!BrowserEmulation!SharedMemory!Mutex
+- RasPbFile
+- ConnHashTable<\d+>_HashTable_Mutex
+- IESQMMUTEX_0_208
+- Local\\c:!users!\w+!appdata!roaming!microsoft!windows!ietldcache!
+- Local\\c:!users!\w+!appdata!local!microsoft!feeds cache!
+- Local\\!IECompat!Mutex
+- Local\\c:!users!\w+!appdata!roaming!microsoft!windows!iecompatcache!
+- Local\\IEHistJournalGlobal_[\w\-]+
+- Local\\IEHistJournalMx_[\w\-]+_[\w]+_C::USERS:\w+:APPDATA:LOCAL:MICROSOFT:WINDOWS:TEMPORARY INTERNET FILES:LOW:SUGGESTEDSITES.DAT
+- SmartScreen_UrsCacheMutex_.*
+- SmartScreen_ClientId_Mutex
+- Local\\c:!users!\w+!appdata!roaming!microsoft!windows!privacie!
+- Local\\http://www.msn.com/
+- Local\\c:!users!\w+!appdata!local!microsoft!internet explorer!domstore!
+- MSIMGSIZECacheMutex
+- Local\\__DDrawExclMode__
+- Local\\__DDrawCheckExclMode__
+- Local\\DDrawWindowListMutex
+- Local\\DDrawDriverObjectListMutex
+- _!SHMSFTHISTORY!_
+- Local\\c:!users!\w+!appdata!local!microsoft!windows!history!history.ie5!mshist\d+!
+- Local\\Mutex_MSOSharedMem
+- Local\\Mso97SharedDg\d+Mutex
+- OfficeAssistantStateMutex
+- Global\\MTX_MSO_Formal1_S-[\d\-]+
+- Global\\MTX_MSO_AdHoc1_S-[\d\-]+
+- Local\\ZonesCounterMutex
+- Local\\ZonesCacheCounterMutex
+- Local\\ZonesLockedCacheCounterMutex
+- Local\\ZoneAttributeCacheCounterMutex
+- Local\\SqmSysTray
+- KYIMEShareCachedData\.MutexObject\.\w+
+- KYTransactionServer\.MutexObject\.\w+
+- Local\\RSS Eventing Connection Database Mutex [A-Za-z\d]{8}
+- Local\\Feed Eventing Shared Memory Mutex S-1-5-21-[\d\-]+
+- 'Local\\Feed Arbitration Shared Memory Mutex \[ User \: S-1-5-21-[\d\-]+ \]'
+- Local\\Feeds Store Mutex S-1-5-21-[\d\-]+
+- Global\\C:/Program Files \(x86\)/Google/Chrome/Application/debug\.log
+- Local\\\_\!MSFTHISTORY\!\_
+- Local\\c\:\!users\!administrator\!appdata\!local\!microsoft\!windows\!temporary\ internet\ files\!content\.ie5\!
+- Local\\c\:\!users\!administrator\!appdata\!roaming\!microsoft\!windows\!cookies\!
+- Local\\c\:\!users\!administrator\!appdata\!local\!microsoft\!windows\!history\!history\.ie5\!
+- Local\\MsFeeds\_IEORC\_d8863854\-886e\-4a8e\-b2e5\-e580ab17661c
+
+RegistryKey:
+# Example of how to whitelist as a dict-structure:
+#- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Wpad\\.*$
+#  values:
+#    - name: WpadDecisionTime
+#      data_type: REG_BINARY
+#    - name: WpadNetworkName
+#      data_type: REG_BINARY
+- key: HKEY_CURRENT_USER\\Software\\Adobe\\Acrobat Reader\\9.0\\AVGeneral$
+- key: HKEY_CURRENT_USER\\Software\\Google\\Update\\ClientState\\\{[\w-]+\}$
+- key: HKEY_CURRENT_USER\\Software\\Google\\Chrome\\PreferenceMACs\\Default$
+- key: HKEY_CURRENT_USER\\Software\\Google\\Chrome\\PreferenceMACs\\Default\\extensions\.settings$
+- key: HKEY_CURRENT_USER\\Software\\Google\\Chrome\\StabilityMetrics$
+- key: HKEY_CURRENT_USER\\Software\\Google\\Chrome\\BLBeacon$
+- key: HKEY_CURRENT_USER\\Software\\Google\\Chrome\\BrowserExitCodes$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Main$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Zones$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Connections$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Recovery\\AdminActive$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Ext\\Stats\\\{[\w-]+\}\\iexplore$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MenuOrder\\Favorites\\Links$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\SearchScopes\\\{[\w-]+\}$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\SearchScopes$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\User Preferences$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Ext\\Stats\\\{[\w-]+\}\\iexplore$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Ext\\Stats\\\{[\w-]+\}\\iexplore$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\Security\\AntiPhishing\\[\w-]+$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\5.0\\Cache\\Extensible Cache\\MSHist\d+$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\LanguageResources$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Shared$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Word$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Word\\Wizards$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Word\\Options$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Word\\UserInfo$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\UserInfo$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Assistant$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\Licensing$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\InstallRoot\\UE$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\General$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Smart Tag\\Applications\\OpusApp$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Smart Tag\\Recognizers\\\{[\w-]+\}\\urn:schemas-microsoft-com:office:smarttags#stockticker$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Smart Tag\\Recognizers\\\{[\w-]+\}\\urn:schemas-microsoft-com:office:smarttags#phone$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Smart Tag\\Recognizers\\\{[\w-]+\}\\urn:schemas-microsoft-com:office:smarttags#date$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Smart Tag$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Excel\\UserInfo$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Excel\\Options$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Excel$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\ReviewCycle$
+- key: HKEY_CURRENT_USER\\Software\\VB and VBA Program Settings\\Euro Add-in\\Wizard Options$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\Common\\Smart Tag\\Applications\\XLMAIN$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\PowerPoint\\UserInfo$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\PowerPoint\\Options$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\PowerPoint$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\PowerPoint\\First Run$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\Common\\BaseSuite$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\11.0\\PowerPoint\\Tips$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Google\\Update\\ClientStateMedium\\\{[\w-]+\}$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Google\\Update\\ClientStateMedium\\\{[\w-]+\}\\_NumAccounts$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Google\\Update\\ClientStateMedium\\\{[\w-]+\}\\_NumSignedIn$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\explorer$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\DirectDraw\\MostRecentApplication$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\Direct3D\\MostRecentApplication$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Products\\[\w]+\\Usage$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0\\FLAGS$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0\\0\\win32$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0\\HELPDIR$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Wow6432Node\\Interface\\\{[\w-]+\}$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\Interface\\\{[\w-]+\}$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\2.0$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\2.0\\FLAGS$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\2.0\\0\\win32$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\2.0\\HELPDIR$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0\\FLAGS$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0\\0\\win32$
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Classes\\TypeLib\\\{[\w-]+\}\\1.0\\HELPDIR$
+- key: HKEY_CURRENT_USER\\Software\\Microsoft\\Internet Explorer\\LinksBar\\ItemCache\\\d
+- key: HKEY\_CURRENT\_USER\\Software\\Adobe\\Acrobat\ Reader\\9\.0\\Installer\\Migrated
+- key: HKEY\_CURRENT\_USER\\Software\\Adobe\\Acrobat\ Reader\\9\.0\\Originals
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\11\.0\\(Word|Excel|PowerPoint)\\Data
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\11\.0\\Common\\Toolbars\\Settings
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Shared\ Tools\\Panose
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\11\.0\\Common\\Research\\Translation
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\Common
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\AntiPhishing
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\11\.0\\(Word|Excel|PowerPoint)\\Resiliency\\StartupItems(\\\\)?
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\IMEMIP\\0x0409
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\11\.0\\PowerPoint\\Resiliency\\StartupItems\\S
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Action\ Center\\Checks\\\{[\w-]+\}\.check\.100
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Internet\ Explorer\\LinksBar
+- key: HKEY\_CURRENT\_USER\\Software\\Microsoft\\Internet\ Explorer\\Suggested\ Sites
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\SystemCertificates\\Disallowed\\Certificates\\.*
+- key: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\SystemCertificates\\AuthRoot\\Certificates\\.*
